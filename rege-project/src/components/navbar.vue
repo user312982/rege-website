@@ -24,8 +24,10 @@
             <!-- Use router-link so navigation is handled by vue-router -->
             <router-link to="/" class="rounded-md px-3 py-2 text-sm font-medium text-orange-500 hover:text-orange-600">Home</router-link>
             <router-link to="/about" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:text-orange-500">About</router-link>
-            <!-- <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:text-orange-500">Projects</a> -->
-            <!-- <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:text-orange-500">Calendar</a> -->
+            <router-link to="/technologies" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:text-orange-500">Technologies</router-link>
+            <router-link to="/solutions" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:text-orange-500">Solutions</router-link>
+
+            
           </div>
         </div>
       </div>
@@ -61,8 +63,7 @@
       <!-- Mobile menu with updated colors -->
       <router-link to="/" class="block rounded-md px-3 py-2 text-base font-medium text-orange-500 hover:bg-gray-100">Home</router-link>
       <router-link to="/about" class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">About</router-link>
-      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Projects</a>
-      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Calendar</a>
+      <router-link to="/technologies" class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100">Technologies</router-link>
     </div>
   </el-disclosure>
   </nav>

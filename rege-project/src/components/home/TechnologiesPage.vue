@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white py-16 px-6 lg:px-8">
+  <div class="px-6 py-16 lg:px-8 bg-[#F5F6F7]">
     <div class="max-w-screen-2xl mx-auto">
       <!-- Header -->
       <div class="mb-12">
@@ -34,20 +34,20 @@
               </TabList>
             </div>
         
-            <div>
+            <div class="bg-[#F5F6F7]">
               <TabPanels class="mt-6">
                 <TabPanel 
                   v-for="(posts, idx) in Object.values(categories)"
                   :key="idx"
                   :class="[
-                    'rounded-xl bg-white p-3',
+                    'rounded-xl bg-[#F5F6F7] p-3',
                     'ring-white/60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
                   ]"
                 >
                   <img 
                     :src="posts.image" 
                     :alt="posts.title"
-                    class="w-full h-auto rounded-lg object-cover"
+                    class="w-full h-auto rounded-lg object-cover bg-[#F5F6F7]"
                   />
                 </TabPanel>
               </TabPanels>
@@ -57,7 +57,7 @@
         
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup>
