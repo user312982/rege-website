@@ -4,10 +4,8 @@ import Navbar from './components/navbar.vue'
 
 <template>
   <div class="min-h-screen bg-gray-900">
-    <div class="relative z-50">
-      <Navbar />
-    </div>
-    <main class="relative z-0">
+    <Navbar />
+    <main class="pt-16">
       <router-view />
     </main>
   </div>

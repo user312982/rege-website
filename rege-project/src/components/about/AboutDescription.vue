@@ -23,7 +23,7 @@
         </div>
         <div class="flex justify-center">
           <img 
-          src="../../assets/About/quotes.png" 
+          src="../../assets/about/quotes.png" 
           alt="Solar panel installation" 
           class="rounded-2xl shadow-lg w-[800px] object-cover object-center mt-12"
             />

@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white py-16 px-6 lg:px-8">
+  <section id="construction" class="bg-white py-16 px-6 lg:px-8">
     <div class="max-w-screen-2xl mx-auto">
       <!-- Header -->
       <div class="mb-12">

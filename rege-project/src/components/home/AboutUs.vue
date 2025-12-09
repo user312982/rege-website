@@ -1,9 +1,7 @@
 <template>
-  <section class="relative bg-white h-screen px-6 lg:px-8 bg-cover " :style="{ backgroundImage: `url(${sustainabilityBg})` }">
-    <!-- Optional: Dark overlay for better text readability -->
+  <section class="relative bg-white h-screen px-6 lg:px-8 bg-cover bg-center md:w-auto" :style="{ backgroundImage: `url(${sustainabilityBg})` }">
     <div class="absolute inset-0 bg-black/30"></div>
     <div class="relative max-w-screen-2xl mx-auto h-full flex flex-col">
-      <!-- Header -->
       <div class="mb-12">
         <h2 class="text-4xl md:text-5xl font-regular text-black mb-6 pt-28">
           Sustainability

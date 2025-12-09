@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-900 bg-cover bg-center relative" :style="{ backgroundImage: `url(${backgroundImage})` }">
+  <div class="relative bg-gray-900 bg-cover bg-center" :style="{ backgroundImage: `url(${backgroundImage})` }">
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black" :style="{ opacity: overlayOpacity }"></div>
 
@@ -31,42 +31,34 @@
 
 <script setup>
 defineProps({
-  // URL background image
   backgroundImage: {
     type: String,
     required: true
   },
-  // Teks heading utama
   heading: {
     type: String,
     required: true
   },
-  // Teks subheading (optional)
   subheading: {
     type: String,
     default: ''
   },
-  // Opacity overlay (0-1)
   overlayOpacity: {
     type: Number,
     default: 0.3
   },
-  // Alignment: 'text-center' atau 'text-left'
   textAlign: {
     type: String,
     default: 'text-center'
   },
-  // Ukuran heading (Tailwind classes)
   headingSize: {
     type: String,
     default: 'text-5xl sm:text-6xl'
   },
-  // Min height class
   minHeight: {
     type: String,
     default: 'min-h-[calc(100vh-120px)]'
   },
-  // Tampilkan gradient decorations
   showGradient: {
     type: Boolean,
     default: true

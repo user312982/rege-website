@@ -9,47 +9,58 @@
         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
           What we do
         </h2>
-        <div class="grid md:grid-cols-2 gap-40 items-center">
+        <div class="flex flex-col md:flex-row gap-8 md:gap-20 items-start">
           <!-- content -->
-          <div>
+          <div class="w-full md:w-3/5">
             <p class="text-gray-600 text-base leading-relaxed mb-8">
               At REGE, we believe that clean energy is the foundation of a sustainable future.<br><br>
               We focus on creating accessible and innovative renewable energy solutions — from education to real-world applications — empowering individuals and businesses to join the transition toward a greener earth.
             </p>
             <img 
-                src="../../assets/solar.png" 
-                alt="Solar panel installation" 
-                class="rounded-2xl shadow-lg w-full object-cover"
+              src="../../assets/solar.png" 
+              alt="Solar panel installation" 
+              class="rounded-2xl shadow-lg object-cover w-full"
             />
           </div>
-          <div>
-            <img 
-                src="../../assets/additional/carbon.png" 
-                alt="Solar panel installation" 
-                class=""
-            />
-            <p class="font-bold text-black text-lg">Development</p>
-            <p class="text-gray-600 text-base leading-relaxed mb-8 max-w-40">
+          
+          <!-- Grid layout for cards -->
+            <div class="w-full md:w-2/5 grid grid-cols-2 md:grid-cols-1 gap-6 md:gap-8">
+            <!-- Development Card -->
+            <div class="flex flex-col">
+              <img 
+              src="../../assets/additional/carbon.png" 
+              alt="Carbon icon" 
+              class="mb-4 w-12 h-12 object-contain"
+              />
+              <p class="font-bold text-black text-lg mb-2">Development</p>
+              <p class="text-gray-600 text-base leading-relaxed mb-4 flex-grow">
               Building the Future of Renewable Energy, One Project at a Time
-            </p>
-            <button class="bg-[#A4640A] text-white px-8 py-2 rounded-lg font-semibold hover:bg-[#8B5308] transition-colors">
+              </p>
+              <router-link to="/solutions#development">
+              <button class="bg-[#A4640A] text-white px-8 py-2 rounded-lg font-semibold hover:bg-[#8B5308] transition-colors w-full">
               Learn More
-            </button>
-            <br><br/>
-            <br><br/>
-            <img 
-                src="../../assets/additional/construction.png" 
-                alt="Solar panel installation" 
-                class=""
-            />
-            <p class="font-bold text-black text-lg">Construction</p>
-            <p class="text-gray-600 text-base leading-relaxed mb-8 max-w-40">
+              </button>
+              </router-link>
+            </div>
+            
+            <!-- Construction Card -->
+            <div class="flex flex-col">
+              <img 
+              src="../../assets/additional/construction.png" 
+              alt="Construction icon" 
+              class="mb-4 w-12 h-12 object-contain"
+              />
+              <p class="font-bold text-black text-lg mb-2">Construction</p>
+              <p class="text-gray-600 text-base leading-relaxed mb-4 flex-grow">
               Turning Clean Energy Designs into Reality.
-            </p>
-            <button class="bg-[#A4640A] text-white px-8 py-2 rounded-lg font-semibold hover:bg-[#8B5308] transition-colors">
-              Learn More
-            </button>
-          </div>
+              </p>
+              <router-link to="/solutions#construction">
+              <button class="bg-[#A4640A] text-white px-8 py-2 rounded-lg font-semibold hover:bg-[#8B5308] transition-colors w-full">
+                Learn More 
+              </button>
+              </router-link>
+            </div>
+            </div>
         </div>
       </div>
     </div>

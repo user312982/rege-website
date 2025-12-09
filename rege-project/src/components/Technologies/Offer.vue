@@ -9,10 +9,10 @@
         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
           What we offer
         </h2>
-          <div class="gap-40 flex flex-col">
+          <div class="gap-40 flex flex-col md:flex-row">
             <!-- content -->
             <div>
-              <div class="w-[480px] pr-8 border-r border-gray-300">
+              <div class="pr-8 ">
                 <p>
                   we combine technology, sustainability, and education to deliver solutions that make renewable energy accessible, efficient, and impactful.
                 </p>
@@ -22,13 +22,13 @@
               <div class="grid md:grid-cols-2">
                 <div>
                   <h3 class="text-[#A4640A]">Clean Energy Solutions</h3>
-                  <p class="w-[360px]">
+                  <p class="w-auto">
                     We provide insights and support for adopting solar, wind, and hydro systems that reduce costs and carbon emissions.
                   </p>
                 </div>
                 <div>
                   <h3 class="text-[#A4640A]">Sustainability Education</h3>
-                  <p class="w-[360px]">
+                  <p class="w-auto">
                     Through interactive content and workshops, we raise awareness about renewable energy and climate responsibility.
                   </p>
                 </div>
@@ -36,13 +36,13 @@
               <div class="grid md:grid-cols-2">
                 <div>
                   <h3 class="text-[#A4640A]">Project Consultation</h3>
-                  <p class="w-[360px]">
+                  <p class="w-auto">
                     Our experts help plan and optimize renewable energy systems for homes, schools, and small industries.
                   </p>
                 </div>
                 <div>
                   <h3 class="text-[#A4640A]">Energy Efficiency Audits</h3>
-                  <p class="w-[360px]">
+                  <p class="w-auto">
                     We analyze energy usage and recommend strategies to improve performance and reduce waste.
                   </p>
                 </div>
