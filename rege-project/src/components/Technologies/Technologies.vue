@@ -1,7 +1,6 @@
 <script setup>
 import HeroSection from '../HeroSection.vue'
 import Offer from '../Technologies/Offer.vue'
-import Footer from '../Footer.vue'
 import Tech from '../Technologies/TechnologiesCategory.vue'
 import reach from '../Technologies/reach.vue'
 </script>
@@ -20,6 +19,5 @@ import reach from '../Technologies/reach.vue'
         <Offer />
         <Tech />
         <reach />
-        <Footer />
     </div>
 </template>

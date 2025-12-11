@@ -1,113 +1,23 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import HeroSection from '../HeroSection.vue'
 import Footer from '../Footer.vue'
 import NewsCard from './NewsCard.vue'
+import { newsArticles as newsData, categories, featuredArticle } from '@/data/newsData.js'
+import { useNewsFilter } from '@/composables/useNewsFilter.js'
 
-const newsArticles = ref([
-  {
-    id: 1,
-    category: 'Solar Energy',
-    title: 'REGE Launches New Solar Farm in Northern Region',
-    description: 'Our latest solar installation will generate clean electricity for over 10,000 homes, reducing carbon emissions by 15,000 tons annually.',
-    date: 'December 5, 2025',
-    dateValue: new Date('2025-12-05'),
-    image: '/src/assets/news/solarpanel.jpg'
-  },
-  {
-    id: 2,
-    category: 'Wind Energy',
-    title: 'Record-Breaking Wind Turbine Efficiency Achieved',
-    description: 'REGE\'s innovative wind turbine design achieves 47% efficiency, setting new industry standards for renewable energy generation.',
-    date: 'November 28, 2025',
-    dateValue: new Date('2025-11-28'),
-    image: '/src/assets/news/windturbin.jpg'
-  },
-  {
-    id: 3,
-    category: 'Hydro Energy',
-    title: 'Sustainable Hydropower Project Completed',
-    description: 'Our new hydroelectric facility provides reliable clean energy while preserving local ecosystems and wildlife habitats.',
-    date: 'November 15, 2025',
-    dateValue: new Date('2025-11-15'),
-    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&auto=format&fit=crop'
-  },
-  {
-    id: 4,
-    category: 'Solar Energy',
-    title: 'Solar Panel Innovation Breakthrough',
-    description: 'New solar panel technology increases energy conversion efficiency by 30%, making solar power more accessible and affordable.',
-    date: 'October 20, 2025',
-    dateValue: new Date('2025-10-20'),
-    image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&auto=format&fit=crop'
-  },
-  {
-    id: 5,
-    category: 'Wind Energy',
-    title: 'Offshore Wind Farm Construction Begins',
-    description: 'REGE breaks ground on largest offshore wind farm project, expected to power 500,000 homes with clean energy.',
-    date: 'September 10, 2025',
-    dateValue: new Date('2025-09-10'),
-    image: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=600&auto=format&fit=crop'
-  },
-  {
-    id: 6,
-    category: 'Hydro Energy',
-    title: 'Smart Hydro Technology Deployed',
-    description: 'Implementing AI-powered systems to optimize hydroelectric power generation while protecting aquatic environments.',
-    date: 'August 5, 2025',
-    dateValue: new Date('2025-08-05'),
-    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&auto=format&fit=crop'
-  }
-])
+// Convert imported data to ref
+const newsArticles = ref(newsData)
 
-// Filter and search states
-const searchQuery = ref('')
-const selectedCategory = ref('All')
-const sortBy = ref('newest')
-
-// Available categories
-const categories = ['All', 'Solar Energy', 'Wind Energy', 'Hydro Energy']
-
-// Computed filtered and sorted articles
-const filteredArticles = computed(() => {
-  let filtered = newsArticles.value
-
-  // Filter by category
-  if (selectedCategory.value !== 'All') {
-    filtered = filtered.filter(article => article.category === selectedCategory.value)
-  }
-
-  // Filter by search query
-  if (searchQuery.value.trim()) {
-    const query = searchQuery.value.toLowerCase()
-    filtered = filtered.filter(article => 
-      article.title.toLowerCase().includes(query) ||
-      article.description.toLowerCase().includes(query) ||
-      article.category.toLowerCase().includes(query)
-    )
-  }
-
-  // Sort articles
-  const sorted = [...filtered]
-  if (sortBy.value === 'newest') {
-    sorted.sort((a, b) => b.dateValue - a.dateValue)
-  } else if (sortBy.value === 'oldest') {
-    sorted.sort((a, b) => a.dateValue - b.dateValue)
-  } else if (sortBy.value === 'title') {
-    sorted.sort((a, b) => a.title.localeCompare(b.title))
-  }
-
-  return sorted
-})
+// Use composable for filtering logic
+const { searchQuery, selectedCategory, sortBy, filteredArticles } = useNewsFilter(newsArticles)
 </script>
 
 <template>
   <div>
     <HeroSection 
       backgroundImage="/src/assets/news/heronews.jpg"
-      heading="Latest News & Updates"
-      subheading="Stay informed about renewable energy innovations and REGE's achievements"
+      heading="“Latest News & Updates”"
       :overlayOpacity="0.5"
       minHeight="min-h-[calc(100vh-120px)]"
       headingSize="text-5xl sm:text-6xl"
@@ -115,7 +25,6 @@ const filteredArticles = computed(() => {
       :showGradient="true"
     />
 
-    <!-- News Content Section -->
     <section class="bg-white py-16 px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <div class="mb-12">
@@ -148,12 +57,10 @@ const filteredArticles = computed(() => {
               </div>
             </div>
 
-            <!-- Sort By Dropdown -->
             <div class="w-full md:w-48">
               <select
                 v-model="sortBy"
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
-              >
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white">
                 <option value="newest">Newest First</option>
                 <option value="oldest">Oldest First</option>
                 <option value="title">Title (A-Z)</option>
@@ -161,7 +68,6 @@ const filteredArticles = computed(() => {
             </div>
           </div>
 
-          <!-- Category Filter Buttons -->
           <div class="flex flex-wrap gap-3">
             <button
               v-for="category in categories"
@@ -178,13 +84,11 @@ const filteredArticles = computed(() => {
             </button>
           </div>
 
-          <!-- Results Count -->
           <div class="text-sm text-gray-600">
             Showing {{ filteredArticles.length }} article{{ filteredArticles.length !== 1 ? 's' : '' }}
           </div>
         </div>
 
-        <!-- News Grid -->
         <div class="grid md:grid-cols-3 gap-8">
           <NewsCard
             v-for="article in filteredArticles"
@@ -212,18 +116,15 @@ const filteredArticles = computed(() => {
             <div>
               <span class="text-xs font-semibold text-orange-600 uppercase">Featured Story</span>
               <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-4">
-                REGE Wins International Sustainability Award 2025
+                {{ featuredArticle.title }}
               </h3>
               <p class="text-gray-600 text-base leading-relaxed mb-6">
-                We are honored to receive the Global Green Energy Leadership Award, recognizing our commitment to innovation, environmental stewardship, and sustainable development across all our renewable energy projects.
+                {{ featuredArticle.description }}
               </p>
-              <button class="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">
-                Read Full Story
-              </button>
             </div>
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop" 
+                :src="featuredArticle.image"
                 alt="Award ceremony"
                 class="rounded-xl shadow-xl"
               />
@@ -233,6 +134,5 @@ const filteredArticles = computed(() => {
       </div>
     </section>
 
-    <Footer />
   </div>
 </template>

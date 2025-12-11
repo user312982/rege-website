@@ -1,7 +1,6 @@
 <script setup>
 import HeroSection from '../HeroSection.vue'
 import Overview from './Overview.vue'
-import Footer from '../Footer.vue'
 import Tech from './TechnologiesPage.vue'
 import Video from './Video.vue'
 import About from './AboutUs.vue'
@@ -23,6 +22,5 @@ import About from './AboutUs.vue'
         <Tech />
         <Video />
         <About />
-        <Footer />
     </div>
 </template>

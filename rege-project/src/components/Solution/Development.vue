@@ -9,7 +9,7 @@
 
         <div class="flex flex-col gap-48">
           <!-- content -->
-          <div class="w-[500px]">
+          <div class="">
             <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Development
             </h2>
@@ -19,9 +19,9 @@
           </div>
           <div class="grid md:grid-cols-2">
             <div>
-              <h3 class="text-[20px]">Transforming Vision into Reality</h3>
+              <h3 class="text-3xl">Transforming Vision into Reality</h3>
               <br>
-              <p class="text-gray-600 text-base leading-relaxed mb-8 w-[600px]">
+              <p class="text-gray-600 text-base leading-relaxed mb-8 ">
                 Our development team brings decades of combined experience in transforming renewable energy concepts into bankable, shovel-ready projects. We navigate complex regulatory environments, secure optimal financing, and ensure every project is positioned for long-term success.
               </p>
               

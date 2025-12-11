@@ -18,6 +18,5 @@ import Footer from '../Footer.vue'
         />
         <AboutDescription />
         <AboutMission />
-        <Footer />
     </div>
 </template>

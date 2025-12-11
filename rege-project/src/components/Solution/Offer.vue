@@ -9,12 +9,12 @@
 
         <div class="flex flex-col-2 gap-48">
             <!-- content -->
-            <div class="w-[500px]">
+            <div class="">
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 What We Offer
                 </h2>
-                <h3 class="mt-[200px] font-bold text-[24px]">Sustainable Installation</h3>
-                <p class="text-gray-600 text-[18px] mt-[20px] w-[400px]">
+                <h3 class="mt-auto font-bold text-3xl">Sustainable Installation</h3>
+                <p class="text-gray-600 text-base mt-[20px]">
                     We construct renewable energy systems using eco-friendly materials and methods to reduce environmental impact.
                 </p>
             </div>
@@ -35,9 +35,9 @@
                 />
             </div>
             <!-- content -->
-            <div class="w-[500px]">
-                <h3 class="mt-[200px] font-bold text-[24px]">Maintenance Support</h3>
-                <p class="text-gray-600 text-[18px] mt-[20px] w-[400px]">
+            <div class="">
+                <h3 class="mt-[200px] font-bold text-[24px] text-left">Maintenance Support</h3>
+                <p class="text-gray-600 text-[18px] mt-[20px]">
                     We provide post-construction maintenance guidance to help communities sustain their renewable systems efficiently.
                 </p>
             </div>

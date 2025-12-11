@@ -1,6 +1,5 @@
 <script setup>
 import HeroSection from '../HeroSection.vue'
-import Footer from '../Footer.vue'
 import { ref } from 'vue'
 
 const form = ref({
@@ -21,9 +20,8 @@ const submitForm = () => {
 <template>
   <div>
     <HeroSection 
-      backgroundImage="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&auto=format&fit=crop"
-      heading="Get in Touch"
-      subheading="Let's work together to build a greener future"
+      backgroundImage="/src/assets/contact/herocontact.jpg"
+      heading="“Get In Touch”"
       :overlayOpacity="0.5"
       minHeight="min-h-[calc(100vh-120px)]"
       headingSize="text-5xl sm:text-6xl"
@@ -42,7 +40,7 @@ const submitForm = () => {
           <p class="text-gray-600 text-base leading-relaxed mb-8">
             We're here to support your journey toward clean energy.<br>
             Whether you have questions, project ideas, or partnership<br>
-            opportunities — let's work together to build a greener future.
+            opportunities let's work together to build a greener future.
           </p>
 
           <!-- Our Location Button -->
@@ -177,7 +175,5 @@ const submitForm = () => {
         </div>
       </div>
     </section>
-
-    <Footer />
   </div>
 </template>

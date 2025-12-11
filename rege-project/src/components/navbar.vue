@@ -37,6 +37,8 @@
             <router-link to="/news" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:text-orange-500">News</router-link>
             <router-link to="/about" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:text-orange-500">About</router-link>
             <router-link to="/contact" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:text-orange-500">Contact</router-link>
+            <router-link to="/uas" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:text-orange-500">Uas</router-link>
+
 
             
           </div>
@@ -65,13 +67,6 @@
           Home
         </router-link>
         <router-link 
-          to="/about" 
-          @click="closeMobileMenu"
-          class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100"
-        >
-          About
-        </router-link>
-        <router-link 
           to="/technologies" 
           @click="closeMobileMenu"
           class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100"
@@ -86,6 +81,13 @@
           Solutions
         </router-link>
         <router-link 
+          to="/about" 
+          @click="closeMobileMenu"
+          class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100"
+        >
+          About
+        </router-link>
+        <router-link 
           to="/news" 
           @click="closeMobileMenu"
           class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100"
@@ -98,6 +100,13 @@
           class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100"
         >
           Contact
+        </router-link>
+        <router-link 
+          to="/uas" 
+          @click="closeMobileMenu"
+          class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100"
+        >
+          Uas
         </router-link>
       </div>
     </div>

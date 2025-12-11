@@ -21,6 +21,5 @@ import Offer from './Offer.vue';
         <Development />
         <Construction />
         <Offer />
-        <Footer />
     </div>
 </template>

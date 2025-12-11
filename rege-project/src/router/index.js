@@ -5,6 +5,7 @@ import Technologies from '../components/Technologies/Technologies.vue'
 import Solutions from '../components/Solution/Solution.vue'
 import News from '../components/news/News.vue'
 import Contact from '../components/contact/Contact.vue'
+import Uas from '../components/uas/uas.vue'
 
 const routes = [
     { path: '/', component: Home },
@@ -13,6 +14,7 @@ const routes = [
     { path: '/solutions', component: Solutions },
     { path: '/news', component: News },
     { path: '/contact', component: Contact },
+    { path: '/uas', component: Uas },
 ]
 
 const router = createRouter({
